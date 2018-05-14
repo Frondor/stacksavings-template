@@ -44,7 +44,7 @@ module.exports = {
     // Frondor here: I'm using "docs" so github pages reads from here
     assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/Frondor/stacksavings-template',
+    assetsPublicPath: '/stacksavings-template',
 
     /**
      * Source Maps
