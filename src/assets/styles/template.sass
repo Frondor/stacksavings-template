@@ -1,0 +1,64 @@
+@import "variables"
+@import "~bootstrap/scss/bootstrap"
+
+#hero
+  height: 70vh
+  width: 100%
+  background: url(/static/hero.jpg) 65% center no-repeat
+  box-shadow: 0 -2rem 9rem 0 rgba(0, 0, 0, 0.4) inset
+  position: relative
+  font-size: 2rem
+  color: #FFF
+
+  &:before
+    content: ''
+    background: rgba(0, 0, 0, 0.3)
+    position: absolute
+    height: 100%
+    width: 100%
+
+  h1
+    position: absolute
+    font-size: 1em
+    padding: 6em 1em 0 1em
+    text-shadow: 3px 2px 6px rgba(0, 0, 0, 0.5)
+
+    span
+      display: block
+      font-weight: 300
+
+@include media-breakpoint-up(sm)
+  #hero
+    font-size: 3rem
+    background-position-x: center
+
+    h1
+      padding: 4.5em 1em 0 1em
+
+@include media-breakpoint-up(md)
+  #hero
+    font-size: 4rem
+    h1
+      padding: 1.5em 1em 0 1em
+
+// CONTENT SECTION
+#content
+  max-width: 1000px
+  background: #ddd
+  margin: 25px auto
+  padding: 15px auto
+
+  #featured
+    margin-top: -4rem
+    .card-article
+      max-width: 300px
+      margin: 0 auto
+      border: none
+
+  @include media-breakpoint-up(sm)
+    #featured
+      margin-top: -6rem
+
+// WEB COMPONENTS
+
+// CARD
