@@ -5,7 +5,7 @@
         <div class="row">
           <card v-for="n in 2" :key="n"
             title="Some short title goes here..."
-            :img="`/static/feature-${n}.jpg`"
+            :img="`/stacksavings-template/static/feature-${n}.jpg`"
             class="bg-white col-xs-12 col-sm-6 col-md-12">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium at distinctio impedit, aperiam velit repellendus incidunt ipsa quidem iste.
             <div slot="footer" class="text-center pb-4">
@@ -20,7 +20,7 @@
       <div class="col-xs-12 col-md-7">
         <card v-for="n in 4" :key="n"
           title="Some short title goes here..."
-          :img="`/static/caption-${n}.jpg`"
+          :img="`/stacksavings-template/static/caption-${n}.jpg`"
           panorama flat :img-right="n % 2 === 0">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium at distinctio impedit, aperiam velit repellendus incidunt ipsa quidem iste.
           <template slot="footer">
@@ -35,7 +35,7 @@
     <div class="row captions">
       <div class="col" v-for="n in 2" :key="n">
         <figure>
-          <img :src="`/static/stack-${n}.jpg`" class="img-fluid">
+          <img :src="`/stacksavings-template/static/stack-${n}.jpg`" class="img-fluid">
           <figcaption>
             <h2>{{ n % 2 ? 'Front' : 'Back'}} <span>End</span></h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

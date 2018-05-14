@@ -35,7 +35,7 @@ export default {
 
 <style lang="sass">
 section
-  background: url('/static/hero.jpg') center center no-repeat
+  background: url('/stacksavings-template/static/hero.jpg') center center no-repeat
   background-attachment: fixed
   min-height: 250px
   position: relative
