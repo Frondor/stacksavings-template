@@ -1,15 +1,19 @@
 <template>
-  <article class="card-article mb-5 rounded" :class="classes">
-    <div class="card-picture">
-      <img :src="img" class="img-fluid">
+  <article class="card-article mb-5 p-0 rounded" :class="classes">
+    <div class="card-picture" :style="imgRight ? {float: 'right'} : {}">
+      <a href="#">
+        <img :src="img" class="img-fluid">
+      </a>
     </div>
-    <header class="p-3">
-      <h3>{{ title }}</h3>
+    <header class="m-0 mt-4">
+      <h3 class="m-0 pl-3 pr-3">{{ title }}</h3>
     </header>
-    <p class="p-3">
-      <slot />
+    <p class=" pl-3 pr-3 pt-2" v-if="$slots.default">
+      <small>
+        {{ $slots.default[0].text.slice(0, 100) + '...' }}
+      </small>
     </p>
-    <footer>
+    <footer class="pl-3 pr-3 pt-2 blockquote-footer">
       <slot name="footer" />
     </footer>
   </article>
@@ -21,7 +25,8 @@ export default {
     panorama: Boolean,
     flat: Boolean,
     title: String,
-    img: String
+    img: String,
+    imgRight: Boolean
   },
   computed: {
     classes () {
@@ -43,5 +48,7 @@ export default {
       float: left
       max-width: 10rem
       margin: 2rem
+  header
+    margin-top: 2rem
 </style>
 
